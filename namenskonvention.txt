@@ -1,0 +1,84 @@
+
+### **1. Geschäftsleitung/Finanzen/Recht (GL)**
+| Gerät             | Name         |
+|--------------------|--------------|
+| Firewall          | `GL-FW-01`   |
+| Switch            | `GL-SW-01`   |
+| Access Point      | `GL-AP-01`   |
+| Server            | `GL-SRV-01`  |
+| Laptop 1          | `GL-PC-01`   |
+| Laptop 2          | `GL-PC-02`   |
+| Laptop 3          | `GL-PC-03`   |
+| Laptop 4          | `GL-PC-04`   |
+| Laptop 5          | `GL-PC-05`   |
+| Laptop 6          | `GL-PC-06`   |
+| Laptop 7          | `GL-PC-07`   |
+
+---
+
+### **2. Marketing/Verkauf (MK)**
+| Gerät             | Name         |
+|--------------------|--------------|
+| Firewall          | `MK-FW-01`   |
+| Switch            | `MK-SW-01`   |
+| Access Point      | `MK-AP-01`   |
+| Server            | `MK-SRV-01`  |
+| Laptop 1          | `MK-PC-01`   |
+| Laptop 2          | `MK-PC-02`   |
+| Laptop 3          | `MK-PC-03`   |
+| Laptop 4          | `MK-PC-04`   |
+| Laptop 5          | `MK-PC-05`   |
+| Laptop 6          | `MK-PC-06`   |
+| Laptop 7          | `MK-PC-07`   |
+| Laptop 8          | `MK-PC-08`   |
+| Laptop (Lernende) | `MK-PC-09`   |
+
+---
+
+### **3. Produktion/Vertrieb (PR)**
+| Gerät             | Name         |
+|--------------------|--------------|
+| Firewall          | `PR-FW-01`   |
+| Switch            | `PR-SW-01`   |
+| Access Point 1    | `PR-AP-01`   |
+| Access Point 2    | `PR-AP-02`   |
+| Server            | `PR-SRV-01`  |
+| Laptop 1          | `PR-PC-01`   |
+| Laptop 2          | `PR-PC-02`   |
+| Laptop 3          | `PR-PC-03`   |
+| Laptop ...        | `PR-PC-18`   |
+| Laptop (Lernende) | `PR-PC-19`   |
+| Laptop (Lernende) | `PR-PC-20`   |
+| Laptop (Lernende) | `PR-PC-21`   |
+| Laptop (Lernende) | `PR-PC-22`   |
+
+---
+
+### **4. IT/Operations (IT)**
+| Gerät             | Name         |
+|--------------------|--------------|
+| Firewall          | `IT-FW-01`   |
+| Switch            | `IT-SW-01`   |
+| Access Point      | `IT-AP-01`   |
+| Server            | `IT-SRV-01`  |
+| Laptop 1          | `IT-PC-01`   |
+| Laptop 2          | `IT-PC-02`   |
+| Laptop 3          | `IT-PC-03`   |
+| Laptop 4          | `IT-PC-04`   |
+| Laptop 5          | `IT-PC-05`   |
+| Laptop 6          | `IT-PC-06`   |
+| Laptop 7          | `IT-PC-07`   |
+| Laptop (Lernende) | `IT-PC-08`   |
+| Laptop (Lernende) | `IT-PC-09`   |
+
+---
+
+### **Namenskonvention für mobile Geräte (MD)**
+| Abteilung         | Name-Beispiel |
+|--------------------|---------------|
+| Geschäftsleitung  | `GL-MD-01`    |
+| Marketing         | `MK-MD-01`    |
+| Produktion        | `PR-MD-01`    |
+| IT                | `IT-MD-01`    |
+
+---

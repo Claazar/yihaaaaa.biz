@@ -1,0 +1,112 @@
+
+Testprotokoll für die Netzwerk-Infrastruktur
+
+Übersicht
+- Projekt: Modernisierung der Netzwerk-Infrastruktur
+- Firma:   yihaaaaa.biz
+- Datum:   08.01.2025
+- Verantwortliche: Levi, Mael, Tobi, Lenny, Alexa, Alessandro
+
+---
+
+1. Testbereiche
+1. Netzwerkverbindungen (LAN, WLAN)
+2. Subnetzkonfiguration
+3. DHCP-Funktionalität
+4. Firewall-Richtlinien
+5. Internetverbindung
+6. Abteilungsserver (Linux)
+7. Access Points (WLAN)
+8. Drucker-Verfügbarkeit
+9. Nicht zulässige Szenarien
+
+---
+
+2. Testszenarien und Ergebnisse
+
+2.1 Netzwerkverbindungen
+| Test-ID | Testbeschreibung                    | Erwartetes Ergebnis        | Ergebnis  | Bemerkung              |
+|---------|-------------------------------------|----------------------------|-----------|------------------------|
+| NW-01   | Verbindung zwischen Laptops und Switch | Verbindung erfolgreich  | ✅ / ❌  |                        |
+| NW-02   | Verbindung Switch zur Firewall       | Verbindung erfolgreich    | ✅ / ❌  |                        |
+| NW-03   | Verbindung Firewall zum ISP-Router  | Verbindung erfolgreich     | ✅ / ❌  |                        |
+
+2.2 Subnetzkonfiguration
+| Test-ID | Testbeschreibung                      | Erwartetes Ergebnis        | Ergebnis  | Bemerkung            |
+|---------|---------------------------------------|----------------------------|-----------|----------------------|
+| SUB-01  | Abteilungsgeräte erhalten IPs aus dem |IP korrekt zugewiesen       | ✅ / ❌  |                      |
+| 	  | richtigen Subnetz                     |                            |           |                      |
+| SUB-02  | Subnetze sind voneinander getrennt    | Kein Cross-Traffic         | ✅ / ❌  |                      |
+
+2.3 DHCP-Funktionalität
+| Test-ID | Testbeschreibung                      | Erwartetes Ergebnis        | Ergebnis  | Bemerkung               |
+|---------|---------------------------------------|----------------------------|-----------|-------------------------|
+| DHCP-01 | Laptops erhalten automatisch IPs      | IP korrekt zugewiesen      | ✅ / ❌  |                         |
+| DHCP-02 | Mobile Geräte erhalten IPs im WLAN    | IP korrekt zugewiesen      | ✅ / ❌  |                         |
+
+2.4 Firewall-Richtlinien
+| Test-ID | Testbeschreibung                      | Erwartetes Ergebnis        | Ergebnis  | Bemerkung               |
+|---------|---------------------------------------|----------------------------|-----------|-------------------------|
+| FW-01   | Abteilung X kann auf Abteilung Y      |                            |           |                         |
+|         | zugreifen (wenn erlaubt)              | Zugriff erlaubt            | ✅ / ❌  |                         |
+| FW-02   | Abteilung X kann NICHT auf            |                            |           |                         |
+|         | Abteilung Y zugreifen (wenn verboten) | Zugriff blockiert          | ✅ / ❌  |                         |
+| FW-03   | Internetzugang ist möglich            | Zugriff erfolgreich        | ✅ / ❌  |                         |
+
+2.5 Internetverbindung
+| Test-ID | Testbeschreibung                      | Erwartetes Ergebnis        | Ergebnis  | Bemerkung               |
+|---------|---------------------------------------|----------------------------|-----------|-------------------------|
+| INT-01  | Mitarbeiter-Laptop kann ins Internet  | Zugriff erfolgreich        | ✅ / ❌  |                         |
+| INT-02  | Gäste-WLAN-Gerät kann ins Internet    | Zugriff erfolgreich        | ✅ / ❌  |                         |
+
+2.6 Abteilungsserver (Linux)
+| Test-ID | Testbeschreibung                      | Erwartetes Ergebnis        | Ergebnis  | Bemerkung               |
+|---------|---------------------------------------|----------------------------|-----------|-------------------------|
+| SRV-01  | Zugriff auf Filesharing-Server        | Zugriff erfolgreich        | ✅ / ❌  |                         |
+| SRV-02  | Dateien können hoch- und   		  |                            |           |                         |
+|         | heruntergeladen werden                | Funktioniert korrekt       | ✅ / ❌  |                         |
+
+2.7 Access Points (WLAN)
+| Test-ID | Testbeschreibung                      | Erwartetes Ergebnis        | Ergebnis  | Bemerkung               |
+|---------|---------------------------------------|----------------------------|-----------|-------------------------|
+| WLAN-01 | Mitarbeitergeräte können              |Verbindung erfolgreich      | ✅ / ❌  |                         |
+|         | sich verbinden                        |                            |           |                         |
+| WLAN-02 | Gäste können sich verbinden           | Verbindung erfolgreich     | ✅ / ❌  |                         |
+ 
+2.8 Drucker-Verfügbarkeit
+| Test-ID | Testbeschreibung                      | Erwartetes Ergebnis        | Ergebnis  | Bemerkung               |
+|---------|---------------------------------------|----------------------------|-----------|-------------------------|
+| DR-01   | Druckauftrag aus Abteilung            |                            |           |                         |
+|         | X wird ausgeführt                     | Druck erfolgreich          | ✅ / ❌  |                         |
+| DR-02   | Abteilungsdrucker nicht zugänglich    |                            |           |                         |
+|         | für andere Abteilungen                | Kein Zugriff               | ✅ / ❌  |                         |
+
+2.9 Nicht zulässige Szenarien
+| Test-ID | Testbeschreibung                      | Erwartetes Ergebnis                  | Ergebnis  | Bemerkung               |
+|---------|---------------------------------------|--------------------------------------|-----------|-------------------------|
+| NZ-01   | Abteilung X kann Abteilung            | Manipulation blockiert               | ✅ / ❌  |                         |                         
+|         | Y-Daten manipulieren                  |                                      |           |                         |
+| NZ-02   | Ein Laptop erhält keine IP-Adresse    | Fehler muss erkannt werden           | ✅ / ❌  |                         |
+| NZ-03   | Gäste haben Zugriff                   |                                      |           |                         |
+|         | auf interne Ressourcen                | Zugriff blockiert                    | ✅ / ❌  |                         |
+| NZ-04   | Ein Switch antwortet nicht auf Pings  | Fehler muss protokolliert werden     | ✅ / ❌  |                         |
+| NZ-05   | Firewall-Regeln werden                | Blockade oder Zugriff-               |           |                         |
+|         | nicht angewendet                      | muss korrekt sein                    | ✅ / ❌  |                         |
+
+---
+
+3. Zusammenfassung
+| Testbereich            | Anzahl Tests | Erfolgreich | Fehlgeschlagen | Bemerkung         |
+|------------------------|--------------|-------------|----------------|-------------------|
+| Netzwerkverbindungen   | [X]          | [X]         | [X]            |                   |
+| Subnetzkonfiguration   | [X]          | [X]         | [X]            |                   |
+| DHCP-Funktionalität    | [X]          | [X]         | [X]            |                   |
+| Firewall-Richtlinien   | [X]          | [X]         | [X]            |                   |
+| Internetverbindung     | [X]          | [X]         | [X]            |                   |
+| Abteilungsserver       | [X]          | [X]         | [X]            |                   |
+| Access Points          | [X]          | [X]         | [X]            |                   |
+| Drucker-Verfügbarkeit  | [X]          | [X]         | [X]            |                   |
+| Nicht zulässige        |              |             |                |                   |
+| Szenarien              | [X]          | [X]         | [X]            |                   |
+
+

@@ -1,0 +1,106 @@
+
+## Betriebshandbuch für die Netzwerk-Infrastruktur
+
+### **1. Übersicht**
+- **Projektname**: Modernisierung der Netzwerk-Infrastruktur
+- **Firma**: yihaaaaa.biz
+- **Erstellungsdatum**: [Datum einfügen]
+- **Verantwortlicher**: [Name einfügen]
+
+Dieses Betriebshandbuch beschreibt die grundlegenden Betriebs- und Wartungsrichtlinien der modernisierten Netzwerk-Infrastruktur. Es richtet sich an Administratoren und IT-Personal.
+
+---
+
+### **2. Netzwerkübersicht**
+- **Gesamtnetzwerk**: Private Class-B-Adresse
+- **Subnets**:
+  - **Geschäftsleitung/Finanzen/Recht**: [Subnetzbereich]
+  - **Marketing/Verkauf**: [Subnetzbereich]
+  - **Produktion/Vertrieb**: [Subnetzbereich]
+  - **IT/Operations**: [Subnetzbereich]
+- **Gerätetypen**:
+  - OPNSense Firewall (Core)
+  - EdgeRouter X (Abteilungsrouter)
+  - Netgear GS108T Switches
+  - Netgear Access Points
+
+---
+
+### **3. Wartungsrichtlinien**
+
+#### **3.1 Geräte-Management**
+- **Firewall**: 
+  - Zugang über Web-Interface: `https://[Firewall-IP]`
+  - Regeländerungen nur durch autorisierte IT-Mitarbeiter
+  - Regelmäßige Updates über das OPNSense-Portal durchführen
+- **EdgeRouter X**:
+  - Zugang über Web-Interface: `https://[Router-IP]`
+  - Konfigurationsänderungen nur nach Freigabe
+- **Switches**:
+  - Verwaltung über das Netgear-Switch-Tool
+  - VLAN-Überprüfungen halbjährlich durchführen
+- **Access Points**:
+  - Monitoring über `https://[AP-Controller-IP]`
+  - Regelmäßige Kanal-Optimierung zur Vermeidung von Störungen
+
+#### **3.2 DHCP-Server**
+- **Standort**: EdgeRouter der jeweiligen Abteilung
+- **Leasetime**: 24 Stunden
+- **Backup-Konfiguration**: Monatlich sichern und extern speichern
+
+#### **3.3 Datensicherung**
+- Abteilungsserver werden täglich auf ein zentrales NAS gesichert.
+- Sicherungszeitpunkt: 22:00 Uhr.
+- Monatliche Offline-Sicherungen auf physische Datenträger.
+
+---
+
+### **4. Notfallmanagement**
+
+#### **4.1 Netzwerkprobleme**
+- **Ausfall eines Switches**:
+  - Prüfen, ob ein Ersatzswitch vorhanden ist
+  - Defekten Switch austauschen
+- **Verbindung zum ISP verloren**:
+  - Kontaktieren des ISP-Supports (Kontaktdaten siehe Abschnitt 6)
+
+#### **4.2 Sicherheitsvorfälle**
+- **Ungewöhnlicher Traffic**:
+  - Firewall-Logs prüfen
+  - Verdächtige IPs blockieren
+- **Gerätekompromittierung**:
+  - Betroffenes Gerät sofort vom Netzwerk trennen
+  - IT-Sicherheitsbeauftragten informieren
+
+---
+
+### **5. Dokumentation der Infrastruktur**
+- **Namenskonvention**:
+  - Siehe Namensschema: [Verweis auf Dokument]
+- **Subnetzpläne**:
+  - Siehe Subnetzplan: [Verweis auf Dokument]
+
+---
+
+### **6. Kontaktinformationen**
+- **IT-Abteilung**:
+  - E-Mail: support@yihaaaaa.biz
+  - Telefon: [Telefonnummer einfügen]
+- **ISP-Support**:
+  - Kontaktnummer: [ISP-Telefonnummer einfügen]
+  - Ticket-System: [ISP-Ticket-System-URL]
+
+---
+
+### **7. Regelmäßige Wartungsaufgaben**
+| Aufgabe                                | Frequenz          | Verantwortlich        |
+|----------------------------------------|-------------------|-----------------------|
+| Firewall-Updates                       | Monatlich         | IT-Abteilung          |
+| Router-Firmware-Updates                | Vierteljährlich   | IT-Abteilung          |
+| Switch-Statusüberprüfung               | Halbjährlich       | IT-Abteilung          |
+| Backup-Integrität testen               | Monatlich         | IT-Abteilung          |
+| Netzwerk-Dokumentation aktualisieren   | Nach Bedarf       | IT-Abteilung          |
+
+---
+
+Dieses Betriebshandbuch sollte regelmäßig aktualisiert und an neue Gegebenheiten angepasst werden.
